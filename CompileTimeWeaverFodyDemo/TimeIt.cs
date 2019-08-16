@@ -15,7 +15,7 @@ namespace CompileTimeWeaverFodyDemo
         {
             // do something before target method is Called
             // ...
-            Console.WriteLine($"Entering {invocation.Method.Name}");
+            Console.WriteLine($"Entering {invocation.Method.Name}()");
             Timer = new Stopwatch();
             Timer.Start();
             try
@@ -34,8 +34,8 @@ namespace CompileTimeWeaverFodyDemo
                 // do something after target method is Called
                 // ...
                 Timer.Stop();
-                Console.WriteLine($"Leaving {invocation.Method.Name}");
-                Console.WriteLine($"Time taken by method {invocation.Method.Name} is {Timer.ElapsedMilliseconds}ms.");
+                Console.WriteLine($"Leaving {invocation.Method.Name}()");
+                Console.WriteLine($"Time taken by method {invocation.Method.Name}() is {Timer.ElapsedMilliseconds}ms.");
             }
         }
 
@@ -44,7 +44,7 @@ namespace CompileTimeWeaverFodyDemo
         {
             // do something before target method is Called
             // ...
-            Console.WriteLine($"Entering async {invocation.Method.Name}");
+            Console.WriteLine($"Entering async {invocation.Method.Name}()");
 
             try
             {
@@ -61,7 +61,7 @@ namespace CompileTimeWeaverFodyDemo
             {
                 // do something after target method is Called
                 // ...
-                Console.WriteLine($"Leaving async {invocation.Method.Name}");
+                Console.WriteLine($"Leaving async {invocation.Method.Name}()");
             }
         }
     }
