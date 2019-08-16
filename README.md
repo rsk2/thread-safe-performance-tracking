@@ -2,7 +2,7 @@
 
 In this repository, I use the compile time weaver fody nuget package to wrap performance diagnostics code around a method to calculate the time taken by the method execution. 
 
-# About Fody Compile Time Weaver:
+About Fody Compile Time Weaver:
 
 From the author: 
 This tool rewrites assembly at VisualStudio.Net build time, so that your code get these achievements that dynamic proxy based enhancement cannot give:
