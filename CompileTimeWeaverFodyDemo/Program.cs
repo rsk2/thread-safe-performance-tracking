@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,12 +11,12 @@ namespace CompileTimeWeaverFodyDemo
     {
         static void Main(string[] args)
         {
-            TestCompileTimeWeaverFody();
+            SleepAndThrowException();
             Console.ReadLine();
         }
 
         [TimeIt]
-        private static void TestCompileTimeWeaverFody()
+        private static void SleepAndThrowException()
         {
             Console.WriteLine("Sleeping for 5 seconds");
             System.Threading.Thread.Sleep(5000);
@@ -23,9 +24,9 @@ namespace CompileTimeWeaverFodyDemo
             {
                 throw new NullReferenceException();
             }
-            catch(Exception ex)
+            catch(Exception)
             {
-                Console.WriteLine("Exception message: "+ ex.Message);
+                //Do nothing
             }
         }
     }
