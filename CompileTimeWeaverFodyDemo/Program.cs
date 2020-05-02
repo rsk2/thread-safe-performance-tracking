@@ -25,6 +25,7 @@ namespace CompileTimeWeaverFodyDemo
         }
         static void PrintTimers()
         {
+            //Here we are printing the data but it also can be saved into a persistent storage
             var timers = MethodExecutionListSingleton.GetTimers();
             foreach(var methodExecution in timers.listOfMethodExecutions)
             {
